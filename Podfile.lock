@@ -1,0 +1,33 @@
+PODS:
+  - Alamofire (3.4.1)
+  - BFPaperButton (2.0.29):
+    - UIColor+BFPaperColors
+  - DropDown (0.1.5)
+  - GoogleMaps (1.13.2)
+  - NBMaterialDialogIOS (0.2.2):
+    - BFPaperButton (~> 2.0.18)
+  - PageMenu (1.2.9)
+  - SwiftyJSON (2.3.2)
+  - UIColor+BFPaperColors (1.7.2)
+
+DEPENDENCIES:
+  - Alamofire
+  - DropDown
+  - GoogleMaps
+  - NBMaterialDialogIOS
+  - PageMenu
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  BFPaperButton: 7df738f2e749a9a4edd3e043f0621ee02215e417
+  DropDown: addffd49f2a014e079ed854adcb3c5473c1ebdf2
+  GoogleMaps: b20a103ff307f58392e603cf142e59d7e30374c1
+  NBMaterialDialogIOS: f7aa80ee3b6c609bc70bbb8f340ba017627bce55
+  PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  UIColor+BFPaperColors: 03101fe6c10ed00c6daae7c26553f1de41500853
+
+PODFILE CHECKSUM: 14a08fec74d0cd5b4da9aec87d9e36c5b83e14cf
+
+COCOAPODS: 1.0.0
