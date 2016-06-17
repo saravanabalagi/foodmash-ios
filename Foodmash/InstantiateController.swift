@@ -1,6 +1,6 @@
 //
 //  InstantiateController.swift
-//  SlashQ
+//  Foodmash
 //
 //  Created by Saravanabalagi R on 16/06/16.
 //  Copyright © 2016 Meals on Wheels Technology LLP. All rights reserved.
@@ -14,15 +14,18 @@ class InstantiateController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Alamofire.request(.POST, "http://foodmash.in/api/v1/instantiate", parameters: ["android_id": UIDevice.currentDevice().identifierForVendor!.UUIDString])
+        Alamofire.request(.POST,
+            R.string.routes.api_root_path() +
+            R.string.routes.instantiate() ,
+            parameters: JsonProvider.getAnonymousJson())
+            .validate()
             .responseJSON { response in
-                print(response.request)  // original URL request
-                print(response.response) // URL response
-                print(response.data)     // server data
-                print(response.result)   // result of response serialization
-                
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
+                switch response.result {
+                case .Success:
+                    let controller = self.storyboard!.instantiateViewControllerWithIdentifier("LocationController")
+                    self.presentViewController(controller, animated: true, completion: nil)
+                case .Failure(let error):
+                    print(error)
                 }
         }
     }

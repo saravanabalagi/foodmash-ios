@@ -1,3 +1,6 @@
 Pods
 Pods/*
 .DS_Store
+.idea
+.idea/*
+R.generated.swift

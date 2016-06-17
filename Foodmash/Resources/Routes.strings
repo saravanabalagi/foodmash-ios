@@ -1,0 +1,67 @@
+/* 
+  Routes.strings
+  Foodmash
+
+  Created by Saravanabalagi R on 17/06/16.
+  Copyright © 2016 Meals on Wheels Technology LLP. All rights reserved.
+*/
+
+//Root Path
+//"api_root_path" = "http://10.0.3.2:3000/api/v1";
+//"api_root_path" = "http://192.168.43.76:3000/api/v1";
+"api_root_path" = "http://www.foodmash.in/api/v1";
+
+//Splash
+"instantiate" = "/instantiate";
+"get_cities" = "/cities";
+
+//Main
+"get_combos" = "/combos";
+
+//CheckoutAddress
+"submit_cart" = "/carts/addCart";
+
+//Address
+"create_delivery_address" = "/delivery_addresses/create";
+"update_delivery_address" = "/delivery_addresses/update";
+"destroy_delivery_address" = "/delivery_addresses/destroy";
+"get_delivery_address" = "/delivery_addresses";
+
+//Payment
+"get_payment_hash" = "/payments/getHash";
+"get_mobile_sdk_hash" = "/payments/getMobileSdkHash";
+"pay_by_cod" = "/payments/purchaseByCod";
+"apply_mash_cash" = "/payments/applyMashCash";
+"apply_promo_code" = "/payments/applyPromoCode";
+"payment_success" = "/payments/success";
+"payment_failure" = "/payments/failure";
+
+//Order
+"get_order" = "/carts/history";
+
+//Profile
+"get_profile" = "/profile";
+"get_otp_profile" = "/profile/sendOtp";
+"verify_profile" = "/profile/verifyOtp";
+"update_profile" = "/profile/update";
+
+//Contact Us
+"contact_us" = "/contact_us";
+"get_legalese" = "/legalese";
+
+//Submit Error
+"add_error" = "/error/addError";
+
+//Login
+"sessions" = "/sessions";
+
+//Sign Up
+"check_email" = "/registrations/checkEmail";
+"check_mobile" = "/registrations/checkMobileNo";
+"sign_up" = "/registrations";
+
+//Forgot and Reset Password
+"forgot_password" = "/registrations/forgotPassword";
+"check_otp" = "/registrations/checkOtp";
+"change_password" = "/registrations/changePassword";
+"reset_password_from_token" = "/registrations/resetPasswordFromToken";

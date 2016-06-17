@@ -8,6 +8,8 @@ pod 'PageMenu'
 pod 'GoogleMaps'
 pod 'SwiftyJSON'
 pod 'NBMaterialDialogIOS'
+pod 'R.swift'
+pod 'ObjectMapper'
 
 target :Foodmash do
 end

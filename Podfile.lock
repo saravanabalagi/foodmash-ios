@@ -6,7 +6,11 @@ PODS:
   - GoogleMaps (1.13.2)
   - NBMaterialDialogIOS (0.2.2):
     - BFPaperButton (~> 2.0.18)
+  - ObjectMapper (1.3.0)
   - PageMenu (1.2.9)
+  - R.swift (2.3.0):
+    - R.swift.Library (~> 2.1.0)
+  - R.swift.Library (2.1.0)
   - SwiftyJSON (2.3.2)
   - UIColor+BFPaperColors (1.7.2)
 
@@ -15,7 +19,9 @@ DEPENDENCIES:
   - DropDown
   - GoogleMaps
   - NBMaterialDialogIOS
+  - ObjectMapper
   - PageMenu
+  - R.swift
   - SwiftyJSON
 
 SPEC CHECKSUMS:
@@ -24,10 +30,13 @@ SPEC CHECKSUMS:
   DropDown: addffd49f2a014e079ed854adcb3c5473c1ebdf2
   GoogleMaps: b20a103ff307f58392e603cf142e59d7e30374c1
   NBMaterialDialogIOS: f7aa80ee3b6c609bc70bbb8f340ba017627bce55
+  ObjectMapper: 4eb08a726e9791a93b2632049951b56a7c17e471
   PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
+  R.swift: 38b2191a603c3d491a09baddfb4ccc7aa9be4d9d
+  R.swift.Library: e5e077ed04f6867a95676af491650091b23518e9
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   UIColor+BFPaperColors: 03101fe6c10ed00c6daae7c26553f1de41500853
 
-PODFILE CHECKSUM: 14a08fec74d0cd5b4da9aec87d9e36c5b83e14cf
+PODFILE CHECKSUM: 70aa5c7a272a27a71261ab3b99ba41fab19f768a
 
 COCOAPODS: 1.0.0

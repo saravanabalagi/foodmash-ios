@@ -116,10 +116,10 @@
             </objects>
             <point key="canvasLocation" x="3020" y="141"/>
         </scene>
-        <!--CombosController-->
+        <!--ComboController-->
         <scene sceneID="HPA-gg-GSk">
             <objects>
-                <viewController title="CombosController" id="26F-9J-67l" sceneMemberID="viewController">
+                <viewController title="ComboController" id="26F-9J-67l" customClass="ComboController" customModule="Foodmash" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="c6Q-Nv-QE3"/>
                         <viewControllerLayoutGuide type="bottom" id="X6e-gX-Xdb"/>
@@ -250,7 +250,7 @@
         <!--Instantiate Controller-->
         <scene sceneID="fdG-cG-aVo">
             <objects>
-                <viewController title="Instantiate Controller" id="JfO-U2-ZD6" sceneMemberID="viewController">
+                <viewController title="Instantiate Controller" id="JfO-U2-ZD6" customClass="InstantiateController" customModule="Foodmash" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SYY-hx-DIj"/>
                         <viewControllerLayoutGuide type="bottom" id="HO8-e8-bGp"/>
@@ -286,7 +286,7 @@
         <!--LocationController-->
         <scene sceneID="cTF-8l-lXN">
             <objects>
-                <viewController storyboardIdentifier="LocationController" title="LocationController" id="6NE-88-Tg6" customClass="LocationController" customModule="SlashQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationController" title="LocationController" id="6NE-88-Tg6" customClass="LocationController" customModule="Foodmash" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="CnC-ae-0tC"/>
                         <viewControllerLayoutGuide type="bottom" id="aJ0-Zg-UJd"/>
@@ -325,14 +325,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ymp-cH-Ndh">
                                         <rect key="frame" x="0.0" y="0.0" width="255" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyA-GU-TiB">
-                                                <rect key="frame" x="111" y="7" width="33" height="16"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cyA-GU-TiB">
+                                                <rect key="frame" x="115" y="7" width="24" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="cyA-GU-TiB" firstAttribute="centerX" secondItem="ymp-cH-Ndh" secondAttribute="centerX" id="MqW-D1-ys7"/>
                                             <constraint firstItem="cyA-GU-TiB" firstAttribute="centerY" secondItem="ymp-cH-Ndh" secondAttribute="centerY" id="XMj-Sp-akY"/>
@@ -352,14 +352,14 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNr-aO-qBv">
                                         <rect key="frame" x="265" y="0.0" width="255" height="30"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLS-SV-mZj">
-                                                <rect key="frame" x="111" y="7" width="33" height="16"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Area" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLS-SV-mZj">
+                                                <rect key="frame" x="113" y="7" width="28" height="16"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.9435296474" green="0.0" blue="0.05293925738" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.78344436767995784" green="0.078431372549019607" blue="0.10980392156862745" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="dLS-SV-mZj" firstAttribute="centerX" secondItem="bNr-aO-qBv" secondAttribute="centerX" id="6pQ-WW-KWl"/>
                                             <constraint firstItem="dLS-SV-mZj" firstAttribute="centerY" secondItem="bNr-aO-qBv" secondAttribute="centerY" id="IOF-uq-bCW"/>
@@ -392,17 +392,20 @@
                     </view>
                     <connections>
                         <outlet property="areaDropdownView" destination="bNr-aO-qBv" id="w2A-uu-6kJ"/>
+                        <outlet property="chosenArea" destination="dLS-SV-mZj" id="GtQ-8q-TOy"/>
+                        <outlet property="chosenCity" destination="cyA-GU-TiB" id="FUj-FI-q52"/>
                         <outlet property="cityDropdownView" destination="ymp-cH-Ndh" id="oH6-Jv-rmB"/>
+                        <segue destination="e6X-0i-LBM" kind="show" identifier="mainTabBarControllerSegue" id="8RF-Ij-gRY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ssu-ed-PE7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-579" y="472"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="F6C-64-yRJ">
             <objects>
-                <tabBarController id="e6X-0i-LBM" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabBarController" title="Main Tab Bar Controller" id="e6X-0i-LBM" customClass="MainTabBarController" customModule="Foodmash" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="GzK-Wb-610">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -418,6 +421,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r0h-Cr-p33" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="49" y="472"/>
+        </scene>
+        <!--Version Controller-->
+        <scene sceneID="uDA-vk-wN0">
+            <objects>
+                <viewController title="Version Controller" id="RbZ-Lo-aZu" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o23-9E-kUf"/>
+                        <viewControllerLayoutGuide type="bottom" id="9eb-d7-BpP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KRk-RG-xk5">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xqb-44-wcd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="-855"/>
         </scene>
         <!--Combos-->
         <scene sceneID="Bh5-VV-lA1">

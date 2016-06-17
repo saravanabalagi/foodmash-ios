@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  SlashQ
+//  Foodmash
 //
 //  Created by Saravanabalagi R on 15/06/16.
 //  Copyright © 2016 Meals on Wheels Technology LLP. All rights reserved.
@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        //R.assertValid()
         return true
     }
 
