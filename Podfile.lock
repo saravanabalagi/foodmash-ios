@@ -4,6 +4,7 @@ PODS:
     - UIColor+BFPaperColors
   - DropDown (0.1.5)
   - GoogleMaps (1.13.2)
+  - Kingfisher (2.4.1)
   - NBMaterialDialogIOS (0.2.2):
     - BFPaperButton (~> 2.0.18)
   - ObjectMapper (1.3.0)
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - Alamofire
   - DropDown
   - GoogleMaps
+  - Kingfisher
   - NBMaterialDialogIOS
   - ObjectMapper
   - PageMenu
@@ -29,6 +31,7 @@ SPEC CHECKSUMS:
   BFPaperButton: 7df738f2e749a9a4edd3e043f0621ee02215e417
   DropDown: addffd49f2a014e079ed854adcb3c5473c1ebdf2
   GoogleMaps: b20a103ff307f58392e603cf142e59d7e30374c1
+  Kingfisher: 41aed5b6c1ed8fa98cf6d75283ce89cf7890f517
   NBMaterialDialogIOS: f7aa80ee3b6c609bc70bbb8f340ba017627bce55
   ObjectMapper: 4eb08a726e9791a93b2632049951b56a7c17e471
   PageMenu: ba19ff267f7a19e444e93c20a7847b78954a7011
@@ -37,6 +40,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
   UIColor+BFPaperColors: 03101fe6c10ed00c6daae7c26553f1de41500853
 
-PODFILE CHECKSUM: 70aa5c7a272a27a71261ab3b99ba41fab19f768a
+PODFILE CHECKSUM: c2f1f401ce4e1ced3aab6c60a276203731e06a44
 
 COCOAPODS: 1.0.0

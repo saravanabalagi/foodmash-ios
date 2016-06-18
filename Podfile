@@ -10,6 +10,7 @@ pod 'SwiftyJSON'
 pod 'NBMaterialDialogIOS'
 pod 'R.swift'
 pod 'ObjectMapper'
+pod 'Kingfisher'
 
 target :Foodmash do
 end

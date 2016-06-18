@@ -16,7 +16,7 @@ class InstantiateController: UIViewController {
         
         Alamofire.request(.POST,
             R.string.routes.api_root_path() +
-            R.string.routes.instantiate() ,
+            R.string.routes.instantiate(),
             parameters: JsonProvider.getAnonymousJson())
             .validate()
             .responseJSON { response in
