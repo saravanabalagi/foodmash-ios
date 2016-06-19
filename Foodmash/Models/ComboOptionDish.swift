@@ -9,13 +9,16 @@
 import Foundation
 import ObjectMapper
 
-class ComboOptionDish: Mappable, Equatable, Hashable {
+class ComboOptionDish: Mappable, Equatable, Hashable, CustomStringConvertible {
     
     var id: Int!
     var priority: Int!
     var minCount: Int!
     var quantity: Int = 0
     var dish: Dish!
+    var description: String {
+        return String(quantity) + "x " + dish.name + "(" + String(id) + ")"
+    }
     
     required init?(_ map: Map) {}
     init(comboOptionDish: ComboOptionDish) {
@@ -40,7 +43,11 @@ class ComboOptionDish: Mappable, Equatable, Hashable {
 }
 
 func == (left: ComboOptionDish, right: ComboOptionDish) -> Bool {
-    if left.id != right.id { return false }
-    if left.quantity != right.quantity { return false }
+    print("Comparing comboOptionDish")
+    print(String(left) + " vs " + String(right))
+    if left.id != right.id { print("IDs not equal\n"); return false }
+    if left.quantity != right.quantity { print("Quantity not equal\n"); return false }
+    print("Both are equal")
+    print()
     return true
 }

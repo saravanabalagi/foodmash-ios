@@ -43,6 +43,14 @@ class ComboOption: Mappable, Equatable {
 		comboOptionDishes <- map["combo_option_dishes"]    
     }
     
+    func contents() -> String {
+        var contents: String = ""
+        for comboOptionDish in selectedComboOptionDishes {
+            contents += " "+String(comboOptionDish.quantity)+"x "+comboOptionDish.dish.name+"\n"
+        }
+        return contents
+    }
+    
 }
 
 func == (left: ComboOption, right: ComboOption) -> Bool {

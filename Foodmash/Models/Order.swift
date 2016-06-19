@@ -8,10 +8,16 @@
 
 import Foundation
 
-class Order {
+class Order: Equatable {
     
     var combo: Combo!
     var quantity: Int!
     var note: String?
     
+}
+
+func == (left: Order, right: Order) -> Bool {
+    if left.quantity != right.quantity { return false }
+    if left.combo != right.combo { return false }
+    return true
 }

@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class Combo: Mappable {
+class Combo: Mappable, Equatable {
     
     enum Category { case REGULAR, BUDGET, CORPORATE, HEALTH }
     enum Size { case MICRO, MEDIUM, MEGA }
@@ -28,6 +28,16 @@ class Combo: Mappable {
     var price: Float!
     var picture: String!
     var comboOptions: [ComboOption] = []
+    var contents: String {
+        var contents: String = ""
+        for comboOption in self.comboOptions {
+            for comboOptionDish in comboOption.selectedComboOptionDishes {
+                contents += " "+String(comboOptionDish.quantity)+"x "+comboOptionDish.dish.name + "\r\n"
+            }
+        }
+        if contents.characters.count > 0 { contents = contents.substringToIndex(contents.endIndex.predecessor()) }
+        return contents
+    }
     
     required init?(_ map: Map) {}
     init(combo: Combo) {
@@ -64,13 +74,32 @@ class Combo: Mappable {
         price <- map["price"]
         picture <- map["picture"]
         comboOptions <- map["combo_options"]
-
     }
     
 }
 
 func == (left: Combo, right: Combo) -> Bool {
+    print("Combo is equal called")
     if left.id != right.id { return false }
-    if left.comboOptions != right.comboOptions { return false }
+    if left.comboOptions != right.comboOptions {
+        print()
+        print("ComboOptions are not equal");
+        for index in 0...left.comboOptions.count-1  {
+            print(left.comboOptions[index].selectedComboOptionDishes == right.comboOptions[index].selectedComboOptionDishes)
+            print(left.comboOptions[index].selectedComboOptionDishes)
+            print("vs")
+            print(right.comboOptions[index].selectedComboOptionDishes)
+            print()
+        }
+        //for comboOption in left.comboOptions {
+            //print(comboOption.contents())
+        //}
+        //print("vs")
+        //for comboOption in right.comboOptions {
+            //print(comboOption.contents())
+        //}
+        print()
+        return false
+    }
     return true
 }

@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -19,14 +18,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="3Eq-TK-Ak0">
-                                <rect key="frame" x="70" y="-1118" width="460" height="2836"/>
+                                <rect key="frame" x="150" y="110" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="7GL-WK-OvX"/>
+                                    <constraint firstAttribute="height" constant="300" id="Bpm-Bn-Sq4"/>
+                                </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Fgy-pb-h33">
+                                <rect key="frame" x="264" y="430" width="73" height="18"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LSw-g8-Lya">
+                                        <rect key="frame" x="0.0" y="0.0" width="73" height="18"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tsy-BB-37T">
+                                                <rect key="frame" x="0.0" y="0.0" width="35" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mash" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JFM-Dl-udN">
+                                                <rect key="frame" x="35" y="0.0" width="38" height="18"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.9435296474" green="0.0" blue="0.05293925738" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="3Eq-TK-Ak0" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="50" id="9LX-d8-0ku"/>
-                            <constraint firstItem="3Eq-TK-Ak0" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="BPe-O1-BJn"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="3Eq-TK-Ak0" secondAttribute="trailing" constant="50" id="Sgt-o5-TTw"/>
+                            <constraint firstItem="3Eq-TK-Ak0" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="7Es-2s-Zza"/>
+                            <constraint firstItem="Fgy-pb-h33" firstAttribute="top" secondItem="3Eq-TK-Ak0" secondAttribute="bottom" constant="20" id="Hdt-jB-WOn"/>
+                            <constraint firstItem="3Eq-TK-Ak0" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-40" id="OFv-jt-8j7"/>
+                            <constraint firstItem="Fgy-pb-h33" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zth-Rt-yWY"/>
                         </constraints>
                     </view>
                 </viewController>

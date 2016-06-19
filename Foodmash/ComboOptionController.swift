@@ -44,13 +44,13 @@ class ComboOptionController: UIViewController, UITableViewDataSource, UITableVie
     func minusTapped(cell: ComboDishTableViewCell) {
         let comboDish = comboOption.comboOptionDishes.filter({$0.id == cell.tag}).first!
         if comboDish.quantity > 0 {
-            if(comboDish.quantity == 1) {
+            comboDish.quantity -= 1
+            cell.quantity.text = String(comboDish.quantity)
+            if(comboDish.quantity == 0) {
                 comboOption.selectedComboOptionDishes.remove(comboDish)
                 cell.quantity.hidden = true
                 cell.minusButton.hidden = true
             }
-            comboDish.quantity -= 1
-            cell.quantity.text = String(comboDish.quantity)
         }
     }
     

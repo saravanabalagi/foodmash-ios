@@ -34,7 +34,7 @@ class ComboDescriptionController: UIViewController, CAPSPageMenuDelegate {
             controllerArray.append(comboOptionController!)
         }
         
-        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 65.0, self.view.frame.width, self.view.frame.height - (65+90)), pageMenuOptions: parameters)
+        pageMenu = CAPSPageMenu(viewControllers: controllerArray, frame: CGRectMake(0.0, 64.0, self.view.frame.width, self.view.frame.height - (64+89)), pageMenuOptions: parameters)
         pageMenu?.delegate = self
         self.view.addSubview(pageMenu!.view)
         
