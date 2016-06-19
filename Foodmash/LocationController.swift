@@ -43,8 +43,9 @@ class LocationController: UIViewController, UIGestureRecognizerDelegate {
                             self.areaDropdown.dataSource.append(area.name)
                         }
                         self.areaDropdown.selectionAction =  { [unowned self] (index: Int, item: String) in
-                            self.chosenArea.text = item
-                            self.chosenPackagingCentreId = cities.first!.areas[index].packagingCentreId
+                            Cache.selectedArea = cities.first!.areas[index]
+                            self.chosenArea.text = Cache.selectedArea?.name
+                            self.chosenPackagingCentreId = Cache.selectedArea?.packagingCentreId
                             print("PackagingCentreId: "+String(self.chosenPackagingCentreId))
                             
                             self.performSegueWithIdentifier(R.segue.locationController.mainTabBarControllerSegue, sender: self)

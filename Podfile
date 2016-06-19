@@ -11,6 +11,7 @@ pod 'NBMaterialDialogIOS'
 pod 'R.swift'
 pod 'ObjectMapper'
 pod 'Kingfisher'
+pod 'EXTView'
 
 target :Foodmash do
 end

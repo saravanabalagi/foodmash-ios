@@ -10,6 +10,9 @@
 		7AC14C2EE4F20ACC4AF5F79B /* Pods_Foodmash.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54E343BF108ADF222B22294A /* Pods_Foodmash.framework */; };
 		7FB55D93822CDE5C0AD74DBF /* Pods_FoodmashTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 112B8846CF307FA1167326CC /* Pods_FoodmashTests.framework */; };
 		B31134B41D13E04A00E5FEB0 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31134B31D13E04A00E5FEB0 /* R.generated.swift */; };
+		B3600BC81D155AB50071673D /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3600BC71D155AB50071673D /* Cache.swift */; };
+		B3600BCA1D155BBC0071673D /* ComboOptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3600BC91D155BBC0071673D /* ComboOptionController.swift */; };
+		B3600BCC1D155F1C0071673D /* ComboDishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3600BCB1D155F1C0071673D /* ComboDishTableViewCell.swift */; };
 		B36F3B7C1D1405F2000B0D34 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F3B7B1D1405F2000B0D34 /* MainTabBarController.swift */; };
 		B36F3B811D1410B4000B0D34 /* Routes.strings in Resources */ = {isa = PBXBuildFile; fileRef = B36F3B801D1410B4000B0D34 /* Routes.strings */; };
 		B36F3B831D141DF5000B0D34 /* ComboTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36F3B821D141DF5000B0D34 /* ComboTableViewCell.swift */; };
@@ -24,6 +27,8 @@
 		B3A59E301D13245000005013 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A59E261D13245000005013 /* Dish.swift */; };
 		B3A59E311D13245000005013 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A59E271D13245000005013 /* Restaurant.swift */; };
 		B3A59E321D13245000005013 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3A59E281D13245000005013 /* User.swift */; };
+		B3C807B91D1526EC00D51595 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C807B81D1526EC00D51595 /* Order.swift */; };
+		B3C807BB1D15291900D51595 /* ComboDescriptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C807BA1D15291900D51595 /* ComboDescriptionController.swift */; };
 		B3D565651D12A5E3007F9A79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3D565641D12A5E3007F9A79 /* Assets.xcassets */; };
 		B3D565731D12A5E3007F9A79 /* FoodmashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D565721D12A5E3007F9A79 /* FoodmashTests.swift */; };
 		B3D5657E1D12A5E3007F9A79 /* FoodmashUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D5657D1D12A5E3007F9A79 /* FoodmashUITests.swift */; };
@@ -58,6 +63,9 @@
 		795254FE3139315FB5C02B95 /* Pods-FoodmashTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodmashTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodmashTests/Pods-FoodmashTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B01A3177C82105B078E5E28A /* Pods-Foodmash.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foodmash.release.xcconfig"; path = "Pods/Target Support Files/Pods-Foodmash/Pods-Foodmash.release.xcconfig"; sourceTree = "<group>"; };
 		B31134B31D13E04A00E5FEB0 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		B3600BC71D155AB50071673D /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Cache.swift; path = Commons/Cache.swift; sourceTree = "<group>"; };
+		B3600BC91D155BBC0071673D /* ComboOptionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComboOptionController.swift; sourceTree = "<group>"; };
+		B3600BCB1D155F1C0071673D /* ComboDishTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComboDishTableViewCell.swift; sourceTree = "<group>"; };
 		B36F3B7B1D1405F2000B0D34 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		B36F3B801D1410B4000B0D34 /* Routes.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = Routes.strings; path = Resources/Routes.strings; sourceTree = "<group>"; };
 		B36F3B821D141DF5000B0D34 /* ComboTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ComboTableViewCell.swift; path = Cells/ComboTableViewCell.swift; sourceTree = "<group>"; };
@@ -73,6 +81,8 @@
 		B3A59E261D13245000005013 /* Dish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dish.swift; path = Models/Dish.swift; sourceTree = "<group>"; };
 		B3A59E271D13245000005013 /* Restaurant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Restaurant.swift; path = Models/Restaurant.swift; sourceTree = "<group>"; };
 		B3A59E281D13245000005013 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
+		B3C807B81D1526EC00D51595 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Order.swift; path = Models/Order.swift; sourceTree = "<group>"; };
+		B3C807BA1D15291900D51595 /* ComboDescriptionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComboDescriptionController.swift; sourceTree = "<group>"; };
 		B3D5655A1D12A5E3007F9A79 /* Foodmash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foodmash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3D565641D12A5E3007F9A79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B3D5656E1D12A5E3007F9A79 /* FoodmashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodmashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,6 +150,7 @@
 		B36F3B841D141DFF000B0D34 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				B3600BCB1D155F1C0071673D /* ComboDishTableViewCell.swift */,
 				B36F3B821D141DF5000B0D34 /* ComboTableViewCell.swift */,
 			);
 			name = Cells;
@@ -158,6 +169,7 @@
 				B3A59E261D13245000005013 /* Dish.swift */,
 				B3A59E271D13245000005013 /* Restaurant.swift */,
 				B3A59E281D13245000005013 /* User.swift */,
+				B3C807B81D1526EC00D51595 /* Order.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -196,6 +208,8 @@
 				B31134B31D13E04A00E5FEB0 /* R.generated.swift */,
 				B3D565931D12A69D007F9A79 /* AppDelegate.swift */,
 				B382BC831D13FCC40032BF80 /* ComboController.swift */,
+				B3600BC91D155BBC0071673D /* ComboOptionController.swift */,
+				B3C807BA1D15291900D51595 /* ComboDescriptionController.swift */,
 				B3D565961D12A69D007F9A79 /* InstantiateController.swift */,
 				B3D565971D12A69D007F9A79 /* LocationController.swift */,
 				B36F3B7B1D1405F2000B0D34 /* MainTabBarController.swift */,
@@ -228,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				B3D565B51D12A6E3007F9A79 /* JsonProvider.swift */,
+				B3600BC71D155AB50071673D /* Cache.swift */,
 			);
 			name = Commons;
 			sourceTree = "<group>";
@@ -497,16 +512,21 @@
 				B3A59E311D13245000005013 /* Restaurant.swift in Sources */,
 				B3D5659C1D12A69D007F9A79 /* InstantiateController.swift in Sources */,
 				B382BC841D13FCC40032BF80 /* ComboController.swift in Sources */,
+				B3C807B91D1526EC00D51595 /* Order.swift in Sources */,
+				B3600BCC1D155F1C0071673D /* ComboDishTableViewCell.swift in Sources */,
 				B31134B41D13E04A00E5FEB0 /* R.generated.swift in Sources */,
 				B3D5659D1D12A69D007F9A79 /* LocationController.swift in Sources */,
 				B3D565B61D12A6E3007F9A79 /* JsonProvider.swift in Sources */,
+				B3600BC81D155AB50071673D /* Cache.swift in Sources */,
 				B3A59E2B1D13245000005013 /* Cart.swift in Sources */,
 				B3D565991D12A69D007F9A79 /* AppDelegate.swift in Sources */,
 				B36F3B831D141DF5000B0D34 /* ComboTableViewCell.swift in Sources */,
 				B3A59E321D13245000005013 /* User.swift in Sources */,
 				B3A59E2A1D13245000005013 /* Area.swift in Sources */,
+				B3600BCA1D155BBC0071673D /* ComboOptionController.swift in Sources */,
 				B3A59E2F1D13245000005013 /* ComboOptionDish.swift in Sources */,
 				B3A59E2C1D13245000005013 /* City.swift in Sources */,
+				B3C807BB1D15291900D51595 /* ComboDescriptionController.swift in Sources */,
 				B3A59E2E1D13245000005013 /* ComboOption.swift in Sources */,
 				B3A59E301D13245000005013 /* Dish.swift in Sources */,
 				B3A59E2D1D13245000005013 /* Combo.swift in Sources */,

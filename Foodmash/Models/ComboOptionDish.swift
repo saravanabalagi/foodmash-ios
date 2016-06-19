@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-class ComboOptionDish: Mappable {
+class ComboOptionDish: Mappable, Equatable, Hashable {
     
     var id: Int!
     var priority: Int!
@@ -18,6 +18,13 @@ class ComboOptionDish: Mappable {
     var dish: Dish!
     
     required init?(_ map: Map) {}
+    init(comboOptionDish: ComboOptionDish) {
+        self.id = comboOptionDish.id        
+        self.priority = comboOptionDish.priority
+        self.minCount = comboOptionDish.minCount
+        self.quantity = comboOptionDish.quantity
+        self.dish = comboOptionDish.dish
+    }
 
     func mapping(map: Map) {	
 		id <- map["id"]	
@@ -27,4 +34,13 @@ class ComboOptionDish: Mappable {
 		dish <- map["dish"]   	 
     }
     
+    var hashValue: Int {
+        return self.id * self.quantity
+    }
+}
+
+func == (left: ComboOptionDish, right: ComboOptionDish) -> Bool {
+    if left.id != right.id { return false }
+    if left.quantity != right.quantity { return false }
+    return true
 }

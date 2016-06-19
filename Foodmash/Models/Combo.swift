@@ -30,6 +30,24 @@ class Combo: Mappable {
     var comboOptions: [ComboOption] = []
     
     required init?(_ map: Map) {}
+    init(combo: Combo) {
+        self.id = combo.id
+        self.groupSize = combo.groupSize
+        self.noOfPurchases = combo.noOfPurchases
+        self.size = combo.size
+        self.label = combo.label
+        self.category = combo.category
+        self.name = combo.name
+        self.description = combo.description
+        self.note = combo.note
+        self.available = combo.available
+        self.customizable = combo.customizable
+        self.price = combo.price
+        self.picture = combo.picture
+        for comboOption in combo.comboOptions {
+            self.comboOptions.append(ComboOption(comboOption: comboOption))
+        }
+    }
 
     func mapping(map: Map) {
         id <- map["id"]
@@ -49,4 +67,10 @@ class Combo: Mappable {
 
     }
     
+}
+
+func == (left: Combo, right: Combo) -> Bool {
+    if left.id != right.id { return false }
+    if left.comboOptions != right.comboOptions { return false }
+    return true
 }

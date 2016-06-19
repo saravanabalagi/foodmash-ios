@@ -21,6 +21,7 @@ class ComboTableViewCell: UITableViewCell {
     @IBOutlet var name: UILabel!
     @IBOutlet var picture: UIImageView!
     @IBOutlet var price: UILabel!
+    @IBOutlet var minusButton: UIButton!
     
     var delegate: ComboDelegate?
     

@@ -14,11 +14,11 @@ import Kingfisher
 class ComboController: UIViewController, UITableViewDelegate, UITableViewDataSource, ComboDelegate {
 
     var packagingCentreId: Int!
-    var combos: [Combo] = []
     @IBOutlet var comboTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.leftBarButtonItem?.title = Cache.selectedArea?.name
         Alamofire.request(.POST,
             R.string.routes.api_root_path() +
                 R.string.routes.get_combos(),
@@ -28,7 +28,7 @@ class ComboController: UIViewController, UITableViewDelegate, UITableViewDataSou
                 switch response.result {
                 case .Success:
                     if let value = response.result.value {
-                        self.combos = Mapper<Combo>().mapArray(value["data"]!!["combos"])!
+                        Cache.combos = Mapper<Combo>().mapArray(value["data"]!!["combos"])!
                         dispatch_async(dispatch_get_main_queue(), {
                             self.comboTableView.reloadData()
                             return
@@ -48,14 +48,16 @@ class ComboController: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     //MARK: Table Methods
     func numberOfSectionsInTableView(tableView: UITableView) -> Int { return 1 }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return combos.count }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int { return Cache.combos.count }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell: ComboTableViewCell = tableView.dequeueReusableCellWithIdentifier("ComboTableViewCell", forIndexPath: indexPath) as! ComboTableViewCell
-        let combo = self.combos[indexPath.row]
+        let combo = Cache.combos[indexPath.row]
+        cell.tag = combo.id
         cell.name.text = combo.name
         cell.picture.kf_setImageWithURL(NSURL(string: combo.picture)!)
         cell.price.text = String(combo.price)
+        cell.quantity.text = String(0)
         cell.delegate = self
 
         return cell
@@ -64,15 +66,29 @@ class ComboController: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     //MARK: Cell Actions
     func pictureTapped(cell: ComboTableViewCell) {
-        print("Picture is tapped")
+        let comboDescriptionController = self.storyboard!.instantiateViewControllerWithIdentifier("ComboDescriptionController") as? ComboDescriptionController
+        comboDescriptionController!.comboId = cell.tag
+        self.navigationController!.pushViewController(comboDescriptionController!, animated: true)
     }
     
     func minusTapped(cell: ComboTableViewCell) {
-        print("Minus is tapped")
+        if(Int(cell.quantity.text!) > 0) {
+            Cart.removeFromCart(cell.tag)
+            cell.quantity.text = String(Int(cell.quantity.text!)! - 1)
+            if(Int(cell.quantity.text!)! == 0) {
+                cell.quantity.hidden = true
+                cell.minusButton.hidden = true
+            }
+        }
     }
     
     func plusTapped(cell: ComboTableViewCell) {
-        print("Plus is tapped")
+        Cart.addToCart(cell.tag)
+        cell.quantity.text = String(Int(cell.quantity.text!)! + 1)
+        if(Int(cell.quantity.text!) > 0) {
+            cell.quantity.hidden = false
+            cell.minusButton.hidden = false
+        }
     }
     /*
     // MARK: - Navigation
